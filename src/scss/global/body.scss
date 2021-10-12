@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    min-width: 1366px;
+    font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  a, 
+  button {
+    cursor: pointer;
+  }
+  
+  a:hover,
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  a:active,
+  button:active {
+    opacity: 0.5;
+  }
+  
+  img {
+    height: auto;
+  }
+  
+  .container {
+    padding-left: 98px;
+    padding-right: 98px;
+    max-width: 1366px;
+  }
+  
+  .center {
+    margin: 0 auto;
+  }
+  
