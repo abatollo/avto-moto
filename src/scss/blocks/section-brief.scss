@@ -79,6 +79,15 @@
   font-size: 20px;
   line-height: 27px;
   color: rgba(72, 73, 77, 0.5);
+
+  background: 
+    linear-gradient(to top left,
+      transparent 0%,
+      transparent calc(50% - 1px),
+      #A3A4A6 50%,
+      transparent calc(50% + 1px),
+      transparent 100%
+    );
 }
 
 .section-brief__application-button {

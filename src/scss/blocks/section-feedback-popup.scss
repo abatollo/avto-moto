@@ -117,6 +117,18 @@
   color: #000000;
 }
 
+.feedback-form__star-enabled {
+  display: none;
+}
+
+.feedback-form__star:checked + label .feedback-form__star-disabled {
+  display: none;
+}
+
+.feedback-form__star:checked + label .feedback-form__star-enabled {
+  display: block;
+}
+
 .feedback-form__input--comment {
   max-height: 118px;
 }
