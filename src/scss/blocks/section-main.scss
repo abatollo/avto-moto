@@ -356,26 +356,3 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 50px;
 }
-
-.popup {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #E5E5E5;
-}
-
-.popup__wrapper {
-    max-width: 700px;
-    min-height: 400px;
-}
-
-.popup__heading {
-    font-size: 25px;
-}

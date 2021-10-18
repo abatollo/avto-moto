@@ -1,0 +1,153 @@
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(72, 73, 77, 0.2);
+}
+
+.popup__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 30px;
+  padding-right: 35px;
+  padding-left: 35px;
+  padding-bottom: 35px;
+  max-width: 700px;
+  min-height: 400px;
+
+  background-color: #F5F5F9;
+}
+
+.popup__heading {
+  margin-top: 0;
+  margin-bottom: 25px;
+
+  font-size: 25px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+  color: #48494D;
+  text-align: center;
+}
+
+.feedback-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 28px;
+  row-gap: 16px;
+  align-items: start;
+}
+
+.feedback-form__input {
+  border-width: 1px;
+  padding-top: 15px;
+  padding-right: 25px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+
+  border-color: rgba(72, 73, 77, 0.2);
+
+  color: #48494D;
+}
+
+.feedback-form__input::placeholder {
+  color: #48494D;
+}
+
+.feedback-form__input--name,
+.feedback-form__input--advantages,
+.feedback-form__input--disadvantages {
+  grid-column: 1;
+}
+
+.feedback-form__stars,
+.feedback-form__input--comment {
+  grid-column: 2;
+}
+
+.feedback-form__stars {
+  grid-row: 1;
+}
+
+.feedback-form__input--comment {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.feedback-form__input {
+  display: flex;
+
+  width: 100%;
+  max-height: 50px;
+}
+
+.feedback-form__stars {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  align-self: stretch;
+}
+
+.feedback-form__stars-label {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.feedback-form__input--comment {
+  max-height: 118px;
+}
+
+.feedback-form__submit-button {
+  display: flex;
+
+  margin-top: 35px;
+  border: 0;
+  padding-top: 17px;
+  padding-right: 20px;
+  padding-bottom: 17px;
+  padding-left: 20px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+
+  background-color: #D12136;
+}
+
+.feedback-form__close-button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+
+  border: 0;
+  background-color: transparent;
+}
