@@ -1,0 +1,31 @@
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  list-style: none;
+}
+
+.main-menu__item {
+  padding: 10px;
+}
+
+.main-menu__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+
+  text-decoration: none;
+  color: #1F1E25;
+}

@@ -39,7 +39,7 @@ import Marpekh3FullX3AVIF from '../../img/marpekh-3-full@3x.avif';
 
 const SliderDisplay = ({ currentSlide }) => {
   return (
-    <div className="slider">
+    <div className="slider-display">
       {currentSlide === 1 &&
         <picture>
           <source width="600" height="375" srcSet={`${Marpekh1FullAVIF} 1x, ${Marpekh1FullX2AVIF} 2x, ${Marpekh1FullX3AVIF} 3x`} type="image/avif" />

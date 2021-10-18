@@ -1,65 +1,65 @@
 .header-main {
-    background-color: #F6F7FF;
+  background-color: #F6F7FF;
 }
-  
+
 .header-main__navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;  
-    padding-top: 6px;
-    padding-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-  
+
 .header-main__logo-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-  
-    color: #1F1E25;
-    text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 5px;
+  margin-bottom: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #1F1E25;
+  text-decoration: none;
 }
-  
+
 .header-main__logo-image {
-    padding-right: 10px;
-    padding-bottom: 10px;
+  display: flex;
+
+  margin-right: 19px;
 }
 
 .header-main__logo-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-  
-.header-main__menu {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 10px;
-  
-    list-style: none;
-}
-  
-.header-main__menu-item {
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-main__menu-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+.header-main__logo-heading-wrapper {
+  margin: 0;
+}
 
-    font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
+.header-main__logo-heading {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.13em;
+  color: #48494D;
+  text-transform: uppercase;
+}
 
-    text-decoration: none;
-    color: #1F1E25;
+.header-main__logo-subheading {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.13em;
+  color: #48494D;
+  text-transform: uppercase;
 }

@@ -1,7 +1,15 @@
 @import "global/normalize.scss";
-@import "global/visually-hidden.scss";
 @import "global/body.scss";
+@import "global/fonts.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/visually-hidden.scss";
 
 @import "blocks/header-main.scss";
+@import "blocks/main-menu.scss";
 @import "blocks/section-main.scss";
+@import "blocks/slider-display.scss";
+@import "blocks/slider-controls.scss";
+@import "blocks/section-brief.scss";
 @import "blocks/section-feedback-popup.scss";
+@import "blocks/footer-main.scss";

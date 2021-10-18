@@ -1,0 +1,26 @@
+.slider-controls {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-controls__button {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #D7D9DF;
+  font-size: 0;
+
+  background-image: url(../../img/icon-arrow-back.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-controls__button--next {
+  transform: rotate(180deg);
+}

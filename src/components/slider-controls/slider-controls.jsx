@@ -40,20 +40,20 @@ import Marpekh3ThumbnailX3WEBP from '../../img/marpekh-3-thumbnail@3x.webp';
 import Marpekh3ThumbnailX3AVIF from '../../img/marpekh-3-thumbnail@3x.avif';
 
 const SliderControls = ({ currentSlide, setCurrentSlide }) => {
-  const prevSlideButtonClickHandler = () => {
+  const sliderControlsButtonPrevClickHandler = () => {
     setCurrentSlide(--currentSlide);
   };
 
-  const nextSlideButtonClickHandler = () => {
+  const sliderControlsButtonNextClickHandler = () => {
     setCurrentSlide(++currentSlide);
   };
 
   return (
-    <div className="slider_controls">
+    <div className="slider-controls">
       <button 
-        className="slider_controls_btn slider_controls_btn--prev"
+        className="slider-controls__button"
         type="button" 
-        onClick={prevSlideButtonClickHandler}
+        onClick={sliderControlsButtonPrevClickHandler}
       >
         Назад
       </button>
@@ -73,9 +73,9 @@ const SliderControls = ({ currentSlide, setCurrentSlide }) => {
         <img width="128" height="80" srcSet={`${Marpekh3ThumbnailJPG} 1x, ${Marpekh3ThumbnailX2JPG} 2x, ${Marpekh3ThumbnailX3JPG} 3x`} src={Marpekh3ThumbnailJPG} alt="Приборная панель чёрного роадстера" />
       </picture>
       <button 
-        className="slider_controls_btn slider_controls_btn--next"
+        className="slider-controls__button slider-controls__button--next"
         type="button" 
-        onClick={nextSlideButtonClickHandler}
+        onClick={sliderControlsButtonNextClickHandler}
       >
         Вперёд
       </button>
