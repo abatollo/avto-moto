@@ -4,18 +4,18 @@ import {connect} from 'react-redux';
 import {ActionCreator} from '../../store/action';
 
 import CloseIcon from '../../img/icon-close.svg';
-// import FormStarsIcon from '../../img/icon-stars-form.svg';
-import StarIcon from '../../img/icon-star.svg';
-import StarIconChecked from '../../img/icon-star-checked.svg';
+import StarInactiveIcon from '../../img/icon-star-inactive.svg';
+import StarActiveIcon from '../../img/icon-star-active.svg';
 
 const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview }) => {
   const refPopup = useRef(null);
+  const refNameInput = useRef(null);
 
-  const [name, setName] = useState(``);
-  const [advantages, setAdvantages] = useState(``);
-  const [disadvantages, setDisadvantages] = useState(``);
-  const [rating, setRating] = useState(2);
-  const [comment, setComment] = useState(``);
+  const [name, setName] = useState(localStorage.getItem(`name`) || ``);
+  const [advantages, setAdvantages] = useState(localStorage.getItem(`advantages`) || ``);
+  const [disadvantages, setDisadvantages] = useState(localStorage.getItem(`disadvantages`) || ``);
+  const [rating, setRating] = useState(localStorage.getItem(`rating`) || 2);
+  const [comment, setComment] = useState(localStorage.getItem(`comment`) || ``);
 
   const feedbackFormSubmitButtonClickHandler = () => {
     changeIsPopupOpened(false);
@@ -44,23 +44,34 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
 
   const nameChangeHandler = (evt) => {
     setName(evt.target.value);
+    localStorage.setItem(`name`, evt.target.value);
   };
 
   const advantagesChangeHandler = (evt) => {
     setAdvantages(evt.target.value);
+    localStorage.setItem(`advantages`, evt.target.value);
   };
 
   const disadvantagesChangeHandler = (evt) => {
     setDisadvantages(evt.target.value);
+    localStorage.setItem(`disadvantages`, evt.target.value);
   };
 
   const starChangeHandler = (newRating) => {
     setRating(newRating);
+    localStorage.setItem(`rating`, newRating);
   };
 
   const commentChangeHandler = (evt) => {
     setComment(evt.target.value);
+    localStorage.setItem(`comment`, evt.target.value);
   };
+
+  useEffect(() => {
+    if (refNameInput.current) {
+      refNameInput.current.focus();
+    }
+  }, [isPopupOpened]);
 
   if (isPopupOpened) {
     return (
@@ -69,20 +80,21 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
           <h2 className="popup__heading">Оставить отзыв</h2>
           <form className="feedback-form" id="feedback-form" method="POST" action="https://echo.htmlacademy.ru">
             {false && <div>Пожалуйста, заполните поле</div>}
-            <input className="feedback-form__input feedback-form__input--name" type="text" name="name" id="feedback-form-name" placeholder="Имя" value={name} onChange={(evt) => {nameChangeHandler(evt)}} required />
+            <input className="feedback-form__input feedback-form__input--name" ref={refNameInput} type="text" name="name" id="feedback-form-name" placeholder="Имя" value={name} onChange={(evt) => {nameChangeHandler(evt)}} required />
             <input className="feedback-form__input feedback-form__input--advantages" type="text" name="advantages" id="feedback-form-advantages" placeholder="Достоинства" onChange={(evt) => {advantagesChangeHandler(evt)}} value={advantages} />
             <input className="feedback-form__input feedback-form__input--disadvantages" type="text" name="disadvantages" id="feedback-form-disadvantages" placeholder="Недостатки" onChange={(evt) => {disadvantagesChangeHandler(evt)}} value={disadvantages} />
             <div className="feedback-form__stars">
               <span className="feedback-form__stars-label">Оцените товар:</span>
-              {/* <img src={FormStarsIcon} alt="" /> */}
-              <ul>
+              <ul className="feedback-form__stars-list">
                 {[...Array(5)].map((_starInput, starInputIndex) => {
                   return (
                     <li key={starInputIndex}>
-                      <input className="feedback-form__star" type="radio" name="rating" id={`star-${starInputIndex + 1}`} onChange={() => {starChangeHandler(starInputIndex + 1)}} checked={rating === starInputIndex + 1} />
-                      <label htmlFor={`star-${starInputIndex + 1}`}>
-                        <img className="feedback-form__star-disabled" width="27" height="25" src={StarIcon} alt="" />
-                        <img className="feedback-form__star-enabled" width="27" height="25" src={StarIconChecked} alt="" />
+                      <input className="visually-hidden" type="radio" name="rating" id={`star-${starInputIndex + 1}`} onChange={() => {starChangeHandler(starInputIndex + 1)}} checked={rating === starInputIndex + 1} />
+                      <label className="feedback-form__stars-list-label" htmlFor={`star-${starInputIndex + 1}`}>
+                        {(starInputIndex < rating) ? 
+                          <img width="27" height="25" src={StarActiveIcon} alt="" /> :
+                          <img width="27" height="25" src={StarInactiveIcon} alt="" />
+                        }
                       </label>
                     </li>
                   );

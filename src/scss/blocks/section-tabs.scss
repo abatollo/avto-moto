@@ -15,7 +15,7 @@
   list-style: none;
 }
 
-.section-tabs__list-item-label {
+.section-tabs__label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,10 +36,11 @@
   cursor: pointer;
 }
 
-.section-tabs__list-item-radio-input:checked + .section-tabs__list-item-label {
+.section-tabs__input:checked + .section-tabs__label {
+  color: #FFFFFF;
+
   background-color: #D12136;
   border-color: #D12136;
-  color: #FFFFFF;
 
   cursor: auto;
 }

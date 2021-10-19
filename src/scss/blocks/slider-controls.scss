@@ -16,11 +16,15 @@
   border-color: #D7D9DF;
   font-size: 0;
 
-  background-image: url(../../img/icon-arrow-back.svg);
+  background-image: url(../../img/icon-arrow-back-active.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.slider-controls__button--next {
+.slider-controls__button[disabled] {
+  background-image: url(../../img/icon-arrow-back-inactive.svg);
+}
+
+.slider-controls__button--prev {
   transform: rotate(180deg);
 }

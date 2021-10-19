@@ -51,9 +51,10 @@ const SliderControls = ({ currentSlide, setCurrentSlide }) => {
   return (
     <div className="slider-controls">
       <button 
-        className="slider-controls__button"
+        className="slider-controls__button slider-controls__button--prev"
         type="button" 
         onClick={sliderControlsButtonPrevClickHandler}
+        disabled={currentSlide <= 1}
       >
         Назад
       </button>
@@ -73,9 +74,10 @@ const SliderControls = ({ currentSlide, setCurrentSlide }) => {
         <img width="128" height="80" srcSet={`${Marpekh3ThumbnailJPG} 1x, ${Marpekh3ThumbnailX2JPG} 2x, ${Marpekh3ThumbnailX3JPG} 3x`} src={Marpekh3ThumbnailJPG} alt="Приборная панель чёрного роадстера" />
       </picture>
       <button 
-        className="slider-controls__button slider-controls__button--next"
+        className="slider-controls__button"
         type="button" 
         onClick={sliderControlsButtonNextClickHandler}
+        disabled={currentSlide >= 3}
       >
         Вперёд
       </button>

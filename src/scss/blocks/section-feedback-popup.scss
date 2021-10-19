@@ -117,16 +117,17 @@
   color: #000000;
 }
 
-.feedback-form__star-enabled {
-  display: none;
+.feedback-form__stars-list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
-.feedback-form__star:checked + label .feedback-form__star-disabled {
-  display: none;
-}
-
-.feedback-form__star:checked + label .feedback-form__star-enabled {
-  display: block;
+.feedback-form__stars-list-label {
+  cursor: pointer;
 }
 
 .feedback-form__input--comment {

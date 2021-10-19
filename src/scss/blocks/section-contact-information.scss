@@ -1,0 +1,48 @@
+.section-contact-information {
+  display: grid;
+  grid-template-columns: 274px 431px;
+  column-gap: 74px;
+
+  margin-top: 30px;
+  margin-left: 9px;
+}
+
+.section-contact-information__subheading,
+.section-contact-information__description {
+  grid-column: 1;
+}
+
+.section-contact-information__subheading {
+  margin: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.section-contact-information__description {
+  margin-top: 8px;
+  margin-bottom: 35px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.section-contact-information__link {
+  color: #1A212F;
+  text-decoration: none;
+} 
+
+.section-contact-information__link:hover {
+  opacity: 0.7;
+}
+
+.section-contact-information__link:active {
+  opacity: 0.5;
+}
+
+.section-contact-information__map {
+  grid-column: 2;
+  grid-row: 1 / 9;
+}

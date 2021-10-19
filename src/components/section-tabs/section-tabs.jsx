@@ -1,18 +1,39 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import TabList from '../tab-list/tab-list';
-import TabSpecifications from '../tab-specifications/tab-specifications';
-import TabReviews from '../tab-reviews/tab-reviews';
-import TabContactInformation from '../tab-contact-information/tab-contact-information';
+import {ActionCreator} from '../../store/action';
 
-const SectionTabs = ({ currentTab }) => {
+import SectionSpecifications from '../section-specifications/section-specifications';
+import SectionReviews from '../section-reviews/section-reviews';
+import SectionContactInformation from '../section-contact-information/section-contact-information';
+
+const SectionTabs = ({ currentTab, setCurrentTab }) => {
   return (
     <section className="section-tabs">
-      <TabList />
-      {currentTab === `product-tab-specifications` && <TabSpecifications />}
-      {currentTab === `product-tab-reviews` && <TabReviews /> }
-      {currentTab === `product-tab-contact-information` && <TabContactInformation /> }
+      <h2 className="visually-hidden">Подробности о товаре</h2>
+      <ul className="section-tabs__list">
+        <li>
+          <input className="section-tabs__input visually-hidden" type="radio" name="tab" value="char" id="product-tab-specifications" onChange={() => {setCurrentTab(`product-tab-specifications`)}} checked={currentTab === `product-tab-specifications`} />
+          <label className="section-tabs__label" htmlFor="product-tab-specifications">
+            Характеристики
+          </label>
+        </li>
+        <li>
+          <input className="section-tabs__input visually-hidden" type="radio" name="tab" value="char" id="product-tab-reviews" onChange={() => {setCurrentTab(`product-tab-reviews`)}} checked={currentTab === `product-tab-reviews`} />
+          <label className="section-tabs__label" htmlFor="product-tab-reviews">
+            Отзывы
+          </label>
+        </li>
+        <li>
+          <input className="section-tabs__input visually-hidden" type="radio" name="tab" value="char" id="product-tab-contact-information" onChange={() => {setCurrentTab(`product-tab-contact-information`)}} checked={currentTab === `product-tab-contact-information`} />
+          <label className="section-tabs__label" htmlFor="product-tab-contact-information">
+            Контакты
+          </label>
+        </li>
+      </ul>
+      {currentTab === `product-tab-specifications` && <SectionSpecifications />}
+      {currentTab === `product-tab-reviews` && <SectionReviews /> }
+      {currentTab === `product-tab-contact-information` && <SectionContactInformation /> }
     </section>
   );
 };
@@ -23,4 +44,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(SectionTabs);
+const mapDispatchToProps = (dispatch) => ({
+  setCurrentTab(currentTab) {
+    dispatch(ActionCreator.setCurrentTab(currentTab));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SectionTabs);

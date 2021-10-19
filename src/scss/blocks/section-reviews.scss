@@ -1,0 +1,142 @@
+.section-reviews {
+  position: relative;
+}
+
+.section-reviews__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.section-reviews__username {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #48494D;
+}
+
+.section-reviews__add-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  padding: 16.5px 20px;
+  max-width: 200px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #D12136;
+
+  border: 1px solid #D12136;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.section-reviews__subheading {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.section-reviews__subheading--plus,
+.section-reviews__subheading--minus {
+  position: relative;
+}
+
+.section-reviews__subheading--plus::before,
+.section-reviews__subheading--minus::before {
+  position: absolute;
+  top: 0;
+  left: -20px;
+
+  font-weight: 600;
+}
+
+.section-reviews__subheading--plus::before {
+  color: #D12136;
+
+  content: "+";
+}
+
+.section-reviews__subheading--minus::before {
+  color: #FF0000;
+
+  content: "-";
+}
+
+.section-reviews__description {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.section-reviews__heading {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.section-reviews__comment {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.section-reviews__rating-stars-list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.section-reviews__recomendation {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #D12136;
+}
+
+.section-reviews__time {
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #000000;
+
+  opacity: 0.4;
+}
+
+.section-reviews__reply-button {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #D12136;
+
+  background-color: transparent;
+  border: none;
+}
