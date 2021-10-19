@@ -27,7 +27,7 @@ const SectionReviews = ({ changeIsPopupOpened, reviews }) => {
         </a>
         {reviews.map((reviewItem, reviewItemIndex) => {
           return(
-            <li key={reviewItemIndex}>
+            <li className="section-reviews__item" key={reviewItemIndex}>
               <div className="section-reviews__username">{reviewItem.name}</div>
               <h3 className="section-reviews__subheading section-reviews__subheading--plus">
                 Достоинства
@@ -59,7 +59,7 @@ const SectionReviews = ({ changeIsPopupOpened, reviews }) => {
               </ul>
               <div className="section-reviews__recomendation">Советует</div> 
               <time className="section-reviews__time">1 минуту назад</time>
-              <a className="section-reviews__reply-button" 
+              <a className="section-reviews__reply" 
                 href="/new-feedback"
                 onClick={(evt) => {
                     reviewsAddButtonClickHandler(evt);

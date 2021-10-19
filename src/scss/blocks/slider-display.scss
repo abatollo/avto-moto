@@ -1,5 +1,32 @@
 .slider-display {
+  position: relative;
+
   display: grid;
   margin-top: 15px;
   margin-bottom: 35px;
+}
+
+.slider-display::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  min-width: 105px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  background-color: #D12136;
+
+  content: "New model";
 }

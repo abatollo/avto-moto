@@ -1,5 +1,8 @@
 .section-reviews {
   position: relative;
+
+  margin-left: 8px;
+  margin-top: 10px;
 }
 
 .section-reviews__list {
@@ -7,6 +10,23 @@
   padding: 0;
 
   list-style: none;
+}
+
+.section-reviews__item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);;
+}
+
+.section-reviews__username,
+.section-reviews__subheading,
+.section-reviews__description,
+.section-reviews__comment {
+  grid-column: span 2;
 }
 
 .section-reviews__username {
@@ -45,6 +65,9 @@
 }
 
 .section-reviews__subheading {
+  margin-top: 14px;
+  margin-bottom: 0;
+
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -56,6 +79,8 @@
 .section-reviews__subheading--plus,
 .section-reviews__subheading--minus {
   position: relative;
+
+  margin-left: 20px;
 }
 
 .section-reviews__subheading--plus::before,
@@ -80,6 +105,10 @@
 }
 
 .section-reviews__description {
+  margin-top: 5px;
+  margin-bottom: 3px;
+  margin-left: 20px;
+
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 20px;
@@ -87,6 +116,9 @@
 }
 
 .section-reviews__heading {
+  margin-top: 6px;
+  margin-bottom: 5px;
+
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -96,6 +128,9 @@
 }
 
 .section-reviews__comment {
+  margin-top: 0;
+  margin-bottom: 20px;
+
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -105,7 +140,10 @@
 }
 
 .section-reviews__rating-stars-list {
+  position: relative;
+
   display: flex;
+  gap: 5px;
 
   margin: 0;
   padding: 0;
@@ -114,6 +152,8 @@
 }
 
 .section-reviews__recomendation {
+  margin-left: 17px;
+
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -123,6 +163,9 @@
 }
 
 .section-reviews__time {
+  display: block;
+  margin-top: 27px;
+
   font-size: 14px;
   line-height: 19px;
 
@@ -131,11 +174,14 @@
   opacity: 0.4;
 }
 
-.section-reviews__reply-button {
+.section-reviews__reply {
+  margin-top: 25px;
+  margin-left: 23px;
+
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 22px;
   color: #D12136;
+  text-decoration: none;
 
   background-color: transparent;
   border: none;
