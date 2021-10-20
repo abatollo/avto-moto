@@ -55,9 +55,17 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
         changeIsPopupOpened(false);
       }
     };
-    window.addEventListener('keydown', popupEscapeKeydownHandler);
-    return () => window.removeEventListener('keydown', popupEscapeKeydownHandler);
+    window.addEventListener(`keydown`, popupEscapeKeydownHandler);
+    return () => window.removeEventListener(`keydown`, popupEscapeKeydownHandler);
   }, [isPopupOpened, changeIsPopupOpened]);
+
+  useEffect(() => {
+    if (isPopupOpened) { 
+      document.body.style.overflow = `hidden`;
+    } else {
+      document.body.style.overflow = ``;
+    }
+  }, [isPopupOpened]);
 
   const nameChangeHandler = (evt) => {
     setName(evt.target.value);
@@ -122,7 +130,7 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
             </div>
             <div className="feedback-form__input-wrapper--comment">
               {commentError && <div className="feedback-form__error">Пожалуйста, заполните поле</div>}
-              <textarea className={`feedback-form__input feedback-form__input--comment${commentError ? ` feedback-form__input--error` : ``}`} name="comment" id="feedback-form-comment" cols="30" rows="10" placeholder="Комментарий" onChange={(evt) => {commentChangeHandler(evt)}} required>{comment}</textarea>
+              <textarea className={`feedback-form__input feedback-form__input--comment${commentError ? ` feedback-form__input--error` : ``}`} name="comment" id="feedback-form-comment" cols="30" rows="10" placeholder="Комментарий" onChange={(evt) => {commentChangeHandler(evt)}} value={comment} required></textarea>
             </div>
           </form>
           <button className="feedback-form__submit-button" form="feedback-form" type="submit" onClick={feedbackFormSubmitButtonClickHandler}>Оставить отзыв</button>
