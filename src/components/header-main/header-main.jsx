@@ -18,7 +18,7 @@ const HeaderMain = () => {
               <div className="header-main__logo-subheading">Moto</div>
             </h1>
           </a>
-          <MainMenu menuItems={HeaderMenuItems} />
+          <MainMenu menuItems={HeaderMenuItems} isHeaderMenu={true} />
         </nav>
       </div>
     </header>

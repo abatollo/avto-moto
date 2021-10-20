@@ -50,6 +50,33 @@
   column-gap: 28px;
   row-gap: 16px;
   align-items: start;
+  grid-auto-flow: dense;
+}
+
+.feedback-form__error {
+  position: relative;
+
+  margin-bottom: 5px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #FF0000;
+}
+
+.feedback-form__error::after {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+
+  color: #FF0000;
+
+  content: "*";
+
+  z-index: 1;
 }
 
 .feedback-form__input {
@@ -68,6 +95,31 @@
   border-color: rgba(72, 73, 77, 0.2);
 
   color: #48494D;
+}
+
+.feedback-form__input--error {
+  border-color: #FF0000;
+}
+
+.feedback-form__input[required] {
+  position: relative;
+}
+
+.feedback-form__input--error::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 999999999;
+  background: yellow;
+
+  color: #FF0000;
+
+  content: "dfasgafdgefg";
+  border: 1px #aaaaaa solid;
 }
 
 .feedback-form__input::placeholder {
@@ -89,9 +141,9 @@
   grid-row: 1;
 }
 
-.feedback-form__input--comment {
-  grid-row-start: 2;
-  grid-row-end: 4;
+.feedback-form__input-wrapper--comment {
+  grid-column: 2;
+  grid-row: span 2;
 }
 
 .feedback-form__input {
@@ -132,6 +184,10 @@
 
 .feedback-form__input--comment {
   max-height: 118px;
+}
+
+.feedback-form__error + .feedback-form__input--comment {
+  max-height: 92px;
 }
 
 .feedback-form__submit-button {

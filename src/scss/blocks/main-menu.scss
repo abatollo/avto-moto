@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   padding-top: 5px;
@@ -11,8 +11,20 @@
   list-style: none;
 }
 
+.main-menu--header {
+  gap: 46px;
+}
+
 .main-menu__item {
   padding: 10px;
+}
+
+.main-menu__item:first-of-type {
+  padding-left: 0;
+}
+
+.main-menu__item:last-of-type {
+  padding-right: 0;
 }
 
 .main-menu__link {
@@ -29,4 +41,12 @@
 
   text-decoration: none;
   color: #1F1E25;
+}
+
+.main-menu__link:first-of-type {
+  padding-left: 0;
+}
+
+.main-menu__link:last-of-type {
+  padding-right: 0;
 }

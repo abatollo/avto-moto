@@ -11,6 +11,9 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
   const refPopup = useRef(null);
   const refNameInput = useRef(null);
 
+  const [nameError, setNameError] = useState(false);
+  const [commentError, setCommentError] = useState(false);
+
   const [name, setName] = useState(localStorage.getItem(`name`) || ``);
   const [advantages, setAdvantages] = useState(localStorage.getItem(`advantages`) || ``);
   const [disadvantages, setDisadvantages] = useState(localStorage.getItem(`disadvantages`) || ``);
@@ -18,8 +21,22 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
   const [comment, setComment] = useState(localStorage.getItem(`comment`) || ``);
 
   const feedbackFormSubmitButtonClickHandler = () => {
-    changeIsPopupOpened(false);
-    addReview(name, advantages, disadvantages, rating, comment);
+    if (!name) {
+      setNameError(true);
+    } else {
+      setNameError(false);
+    }
+    
+    if (!comment) {
+      setCommentError(true);
+    } else {
+      setCommentError(false);
+    }
+    
+    if (name && comment) {
+      changeIsPopupOpened(false);
+      addReview(name, advantages, disadvantages, rating, comment);
+    }
   };
 
   const feedbackFormCloseButtonClickHandler = () => {
@@ -79,8 +96,10 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
         <div className="popup__wrapper">
           <h2 className="popup__heading">Оставить отзыв</h2>
           <form className="feedback-form" id="feedback-form" method="POST" action="https://echo.htmlacademy.ru">
-            {false && <div>Пожалуйста, заполните поле</div>}
-            <input className="feedback-form__input feedback-form__input--name" ref={refNameInput} type="text" name="name" id="feedback-form-name" placeholder="Имя" value={name} onChange={(evt) => {nameChangeHandler(evt)}} required />
+            <div className="feedback-form__input-wrapper--name">
+              {nameError && <div className="feedback-form__error">Пожалуйста, заполните поле</div>}
+              <input className={`feedback-form__input feedback-form__input--name${nameError ? ` feedback-form__input--error` : ``}`} ref={refNameInput} type="text" name="name" id="feedback-form-name" placeholder="Имя" value={name} onChange={(evt) => {nameChangeHandler(evt)}} required />
+            </div>
             <input className="feedback-form__input feedback-form__input--advantages" type="text" name="advantages" id="feedback-form-advantages" placeholder="Достоинства" onChange={(evt) => {advantagesChangeHandler(evt)}} value={advantages} />
             <input className="feedback-form__input feedback-form__input--disadvantages" type="text" name="disadvantages" id="feedback-form-disadvantages" placeholder="Недостатки" onChange={(evt) => {disadvantagesChangeHandler(evt)}} value={disadvantages} />
             <div className="feedback-form__stars">
@@ -101,7 +120,10 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
                 })}
               </ul>
             </div>
-            <textarea className="feedback-form__input feedback-form__input--comment" name="comment" id="feedback-form-comment" cols="30" rows="10" placeholder="Комментарий" onChange={(evt) => {commentChangeHandler(evt)}} required>{comment}</textarea>
+            <div className="feedback-form__input-wrapper--comment">
+              {commentError && <div className="feedback-form__error">Пожалуйста, заполните поле</div>}
+              <textarea className={`feedback-form__input feedback-form__input--comment${commentError ? ` feedback-form__input--error` : ``}`} name="comment" id="feedback-form-comment" cols="30" rows="10" placeholder="Комментарий" onChange={(evt) => {commentChangeHandler(evt)}} required>{comment}</textarea>
+            </div>
           </form>
           <button className="feedback-form__submit-button" form="feedback-form" type="submit" onClick={feedbackFormSubmitButtonClickHandler}>Оставить отзыв</button>
           <button className="feedback-form__close-button" type="button" onClick={feedbackFormCloseButtonClickHandler}><img src={CloseIcon} alt="" /></button>

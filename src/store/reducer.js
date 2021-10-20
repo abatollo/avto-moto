@@ -1,7 +1,7 @@
 import {ActionType} from './action';
 
 const initialState = {
-  isPopupOpened: true,
+  isPopupOpened: false,
   currentSlide: 1,
   currentTab: `product-tab-specifications`,
   reviews: [
