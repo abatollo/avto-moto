@@ -1,25 +1,25 @@
 const ActionType = {
-  CHANGE_IS_POPUP_OPENED: `CHANGE_IS_POPUP_OPENED`,
-  SET_CURRENT_SLIDE: `SET_CURRENT_SLIDE`,
-  SET_CURRENT_TAB: `SET_CURRENT_TAB`,
-  ADD_REVIEW: `ADD_REVIEW`
+  ON_IS_POPUP_OPENED_CHANGE: `ON_IS_POPUP_OPENED_CHANGE`,
+  ON_CURRENT_SLIDE_SET: `ON_CURRENT_SLIDE_SET`,
+  ON_CURRENT_TAB_SET: `ON_CURRENT_TAB_SET`,
+  ON_REVIEW_ADD: `ON_REVIEW_ADD`
 };
 
 const ActionCreator = {
-  changeIsPopupOpened: (payload) => ({
-    type: ActionType.CHANGE_IS_POPUP_OPENED,
+  onIsPopupOpenedChange: (payload) => ({
+    type: ActionType.ON_IS_POPUP_OPENED_CHANGE,
     payload
   }),
-  setCurrentSlide: (payload) => ({
-    type: ActionType.SET_CURRENT_SLIDE,
+  onCurrentSlideSet: (payload) => ({
+    type: ActionType.ON_CURRENT_SLIDE_SET,
     payload
   }),
-  setCurrentTab: (payload) => ({
-    type: ActionType.SET_CURRENT_TAB,
+  onCurrentTabSet: (payload) => ({
+    type: ActionType.ON_CURRENT_TAB_SET,
     payload
   }),
-  addReview: (payload) => ({
-    type: ActionType.ADD_REVIEW,
+  onReviewAdd: (payload) => ({
+    type: ActionType.ON_REVIEW_ADD,
     payload
   })
 };

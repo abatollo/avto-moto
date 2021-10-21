@@ -7,10 +7,10 @@ import {ActionCreator} from '../../store/action';
 import StarInactiveIcon from '../../img/icon-star-inactive.svg';
 import StarActiveIcon from '../../img/icon-star-active.svg';
 
-const SectionReviews = ({ changeIsPopupOpened, reviews }) => {
+const SectionReviews = ({ onIsPopupOpenedChange, reviews }) => {
   const handleReviewsAddButtonClick = (evt) => {
     evt.preventDefault();
-    changeIsPopupOpened(true);
+    onIsPopupOpenedChange(true);
   };
 
   return (
@@ -78,7 +78,7 @@ const SectionReviews = ({ changeIsPopupOpened, reviews }) => {
 };
 
 SectionReviews.propTypes = {
-  changeIsPopupOpened: PropTypes.func.isRequired,
+  onIsPopupOpenedChange: PropTypes.func.isRequired,
   reviews: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
@@ -91,8 +91,8 @@ SectionReviews.propTypes = {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  changeIsPopupOpened(isPopupOpened) {
-    dispatch(ActionCreator.changeIsPopupOpened(isPopupOpened));
+  onIsPopupOpenedChange(isPopupOpened) {
+    dispatch(ActionCreator.onIsPopupOpenedChange(isPopupOpened));
   }
 });
 

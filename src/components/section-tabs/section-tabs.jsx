@@ -8,25 +8,25 @@ import SectionSpecifications from '../section-specifications/section-specificati
 import SectionReviews from '../section-reviews/section-reviews';
 import SectionContactInformation from '../section-contact-information/section-contact-information';
 
-const SectionTabs = ({ currentTab, setCurrentTab }) => {
+const SectionTabs = ({ currentTab, onCurrentTabSet }) => {
   return (
     <section className="section-tabs">
       <h2 className="visually-hidden">Подробности о товаре</h2>
       <ul className="section-tabs__list">
         <li>
-          <input className="section-tabs__input visually-hidden" type="radio" name="tab" value="char" id="product-tab-specifications" onChange={() => {setCurrentTab(`product-tab-specifications`)}} checked={currentTab === `product-tab-specifications`} />
+          <input className="section-tabs__input visually-hidden" type="radio" name="tab" value="char" id="product-tab-specifications" onChange={() => {onCurrentTabSet(`product-tab-specifications`)}} checked={currentTab === `product-tab-specifications`} />
           <label className="section-tabs__label" htmlFor="product-tab-specifications">
             Характеристики
           </label>
         </li>
         <li>
-          <input className="section-tabs__input visually-hidden" type="radio" name="tab" value="char" id="product-tab-reviews" onChange={() => {setCurrentTab(`product-tab-reviews`)}} checked={currentTab === `product-tab-reviews`} />
+          <input className="section-tabs__input visually-hidden" type="radio" name="tab" value="char" id="product-tab-reviews" onChange={() => {onCurrentTabSet(`product-tab-reviews`)}} checked={currentTab === `product-tab-reviews`} />
           <label className="section-tabs__label" htmlFor="product-tab-reviews">
             Отзывы
           </label>
         </li>
         <li>
-          <input className="section-tabs__input visually-hidden" type="radio" name="tab" value="char" id="product-tab-contact-information" onChange={() => {setCurrentTab(`product-tab-contact-information`)}} checked={currentTab === `product-tab-contact-information`} />
+          <input className="section-tabs__input visually-hidden" type="radio" name="tab" value="char" id="product-tab-contact-information" onChange={() => {onCurrentTabSet(`product-tab-contact-information`)}} checked={currentTab === `product-tab-contact-information`} />
           <label className="section-tabs__label" htmlFor="product-tab-contact-information">
             Контакты
           </label>
@@ -41,7 +41,7 @@ const SectionTabs = ({ currentTab, setCurrentTab }) => {
 
 SectionTabs.propTypes = {
   currentTab: PropTypes.string.isRequired,
-  setCurrentTab: PropTypes.func.isRequired
+  onCurrentTabSet: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {
@@ -51,8 +51,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  setCurrentTab(currentTab) {
-    dispatch(ActionCreator.setCurrentTab(currentTab));
+  onCurrentTabSet(currentTab) {
+    dispatch(ActionCreator.onCurrentTabSet(currentTab));
   }
 });
 

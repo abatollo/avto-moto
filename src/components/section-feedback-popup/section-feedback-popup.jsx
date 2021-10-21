@@ -8,7 +8,7 @@ import CloseIcon from '../../img/icon-close.svg';
 import StarInactiveIcon from '../../img/icon-star-inactive.svg';
 import StarActiveIcon from '../../img/icon-star-active.svg';
 
-const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview }) => {
+const SectionFeedbackPopup = ({ isPopupOpened, onIsPopupOpenedChange, onReviewAdd }) => {
   const refPopup = useRef(null);
   const refNameInput = useRef(null);
 
@@ -35,30 +35,30 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
     }
     
     if (name && comment) {
-      changeIsPopupOpened(false);
-      addReview(name, advantages, disadvantages, rating, comment);
+      onReviewAdd(name, advantages, disadvantages, rating, comment);
+      onIsPopupOpenedChange(false);
     }
   };
 
   const handleFeedbackFormCloseButtonClick = () => {
-    changeIsPopupOpened(false);
+    onIsPopupOpenedChange(false);
   };
 
   const handlePopupClick = (evt) => {
     if (evt.target === refPopup.current) {
-      changeIsPopupOpened(false);
+      onIsPopupOpenedChange(false);
     }
   };
 
   useEffect(() => {
     const handlePopupEscapeKeydown = (evt) => {
       if (evt.key === `Escape`) {
-        changeIsPopupOpened(false);
+        onIsPopupOpenedChange(false);
       }
     };
     window.addEventListener(`keydown`, handlePopupEscapeKeydown);
     return () => window.removeEventListener(`keydown`, handlePopupEscapeKeydown);
-  }, [isPopupOpened, changeIsPopupOpened]);
+  }, [isPopupOpened, onIsPopupOpenedChange]);
 
   useEffect(() => {
     if (isPopupOpened) { 
@@ -150,8 +150,8 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
 
 SectionFeedbackPopup.propTypes = {
   isPopupOpened: PropTypes.bool.isRequired,
-  changeIsPopupOpened: PropTypes.func.isRequired,
-  addReview: PropTypes.func.isRequired
+  onIsPopupOpenedChange: PropTypes.func.isRequired,
+  onReviewAdd: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {
@@ -161,17 +161,17 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  changeIsPopupOpened(isPopupOpened) {
-    dispatch(ActionCreator.changeIsPopupOpened(isPopupOpened));
+  onIsPopupOpenedChange(isPopupOpened) {
+    dispatch(ActionCreator.onIsPopupOpenedChange(isPopupOpened));
   },
-  addReview(
+  onReviewAdd(
     name,
     advantages,
     disadvantages,
     rating,
     comment
   ) {
-    dispatch(ActionCreator.addReview({
+    dispatch(ActionCreator.onReviewAdd({
       name,
       advantages,
       disadvantages,

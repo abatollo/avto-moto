@@ -40,13 +40,13 @@ import Marpekh3ThumbnailX3JPG from '../../img/marpekh-3-thumbnail@3x.jpg';
 import Marpekh3ThumbnailX3WEBP from '../../img/marpekh-3-thumbnail@3x.webp';
 import Marpekh3ThumbnailX3AVIF from '../../img/marpekh-3-thumbnail@3x.avif';
 
-const SliderControls = ({ currentSlide, setCurrentSlide }) => {
+const SliderControls = ({ currentSlide, onCurrentSlideSet }) => {
   const handleSliderControlsButtonPrevClick = () => {
-    setCurrentSlide(--currentSlide);
+    onCurrentSlideSet(--currentSlide);
   };
 
   const handleSliderControlsButtonNextClick = () => {
-    setCurrentSlide(++currentSlide);
+    onCurrentSlideSet(++currentSlide);
   };
 
   return (
@@ -88,7 +88,7 @@ const SliderControls = ({ currentSlide, setCurrentSlide }) => {
 
 SliderControls.propTypes = {
   currentSlide: PropTypes.number.isRequired,
-  setCurrentSlide: PropTypes.func.isRequired
+  onCurrentSlideSet: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {
@@ -98,8 +98,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  setCurrentSlide(currentSlide) {
-    dispatch(ActionCreator.setCurrentSlide(currentSlide));
+  onCurrentSlideSet(currentSlide) {
+    dispatch(ActionCreator.onCurrentSlideSet(currentSlide));
   }
 });
 
