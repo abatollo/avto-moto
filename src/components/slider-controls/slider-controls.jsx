@@ -41,11 +41,11 @@ import Marpekh3ThumbnailX3WEBP from '../../img/marpekh-3-thumbnail@3x.webp';
 import Marpekh3ThumbnailX3AVIF from '../../img/marpekh-3-thumbnail@3x.avif';
 
 const SliderControls = ({ currentSlide, setCurrentSlide }) => {
-  const sliderControlsButtonPrevClickHandler = () => {
+  const handleSliderControlsButtonPrevClick = () => {
     setCurrentSlide(--currentSlide);
   };
 
-  const sliderControlsButtonNextClickHandler = () => {
+  const handleSliderControlsButtonNextClick = () => {
     setCurrentSlide(++currentSlide);
   };
 
@@ -54,7 +54,7 @@ const SliderControls = ({ currentSlide, setCurrentSlide }) => {
       <button 
         className="slider-controls__button slider-controls__button--prev"
         type="button" 
-        onClick={sliderControlsButtonPrevClickHandler}
+        onClick={handleSliderControlsButtonPrevClick}
         disabled={currentSlide <= 1}
       >
         Назад
@@ -77,7 +77,7 @@ const SliderControls = ({ currentSlide, setCurrentSlide }) => {
       <button 
         className="slider-controls__button"
         type="button" 
-        onClick={sliderControlsButtonNextClickHandler}
+        onClick={handleSliderControlsButtonNextClick}
         disabled={currentSlide >= 3}
       >
         Вперёд

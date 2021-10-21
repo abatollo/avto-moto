@@ -8,7 +8,7 @@ import StarInactiveIcon from '../../img/icon-star-inactive.svg';
 import StarActiveIcon from '../../img/icon-star-active.svg';
 
 const SectionReviews = ({ changeIsPopupOpened, reviews }) => {
-  const reviewsAddButtonClickHandler = (evt) => {
+  const handleReviewsAddButtonClick = (evt) => {
     evt.preventDefault();
     changeIsPopupOpened(true);
   };
@@ -19,7 +19,7 @@ const SectionReviews = ({ changeIsPopupOpened, reviews }) => {
       <a className="section-reviews__add-button" 
         href="/new-feedback" 
         onClick={(evt) => {
-            reviewsAddButtonClickHandler(evt);
+            handleReviewsAddButtonClick(evt);
           }
         }
       >
@@ -63,7 +63,7 @@ const SectionReviews = ({ changeIsPopupOpened, reviews }) => {
               <a className="section-reviews__reply" 
                 href="/new-feedback"
                 onClick={(evt) => {
-                    reviewsAddButtonClickHandler(evt);
+                    handleReviewsAddButtonClick(evt);
                   }
                 }
               >
