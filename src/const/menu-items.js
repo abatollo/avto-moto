@@ -1,50 +1,50 @@
 const HeaderMenuItems = [
   {
-    href: `cars`,
-    label: `Автомобили`
+    HREF: `cars`,
+    LABEL: `Автомобили`
   },
   {
-    href: `contact-information`,
-    label: `Контакты`
+    HREF: `contact-information`,
+    LABEL: `Контакты`
   },
   {
-    href: `services`,
-    label: `Услуги`
+    HREF: `services`,
+    LABEL: `Услуги`
   },
   {
-    href: `jobs`,
-    label: `Вакансии`
+    HREF: `jobs`,
+    LABEL: `Вакансии`
   },
 ];
 
 const FooterMenuItems = [
   {
-    href: `corporate-clients`,
-    label: `Корпоративным клиентам`
+    HREF: `corporate-clients`,
+    LABEL: `Корпоративным клиентам`
   },
   {
-    href: `clients`,
-    label: `Клиентам`
+    HREF: `clients`,
+    LABEL: `Клиентам`
   },
   {
-    href: `rent`,
-    label: `Аренда авто`
+    HREF: `rent`,
+    LABEL: `Аренда авто`
   },
   {
-    href: `carsharing`,
-    label: `Каршеринг`
+    HREF: `carsharing`,
+    LABEL: `Каршеринг`
   },
   {
-    href: `how2sell`,
-    label: `Как продать авто`
+    HREF: `how2sell`,
+    LABEL: `Как продать авто`
   },
   {
-    href: `trade-in`,
-    label: `Trade-in`
+    HREF: `trade-in`,
+    LABEL: `Trade-in`
   },
   {
-    href: `test-drive`,
-    label: `Test drive`
+    HREF: `test-drive`,
+    LABEL: `Test drive`
   },
 ];
 

@@ -60,18 +60,18 @@ const SliderControls = ({ currentSlide, setCurrentSlide }) => {
         Назад
       </button>
       <picture>
-        <source width="128" height="80" srcSet={`${Marpekh1ThumbnailAVIF} 1x, ${Marpekh1ThumbnailX2AVIF} 2x, ${Marpekh1ThumbnailX3AVIF} 3x`} type="image/avif" />
-        <source width="128" height="80" srcSet={`${Marpekh1ThumbnailWEBP} 1x, ${Marpekh1ThumbnailX2WEBP} 2x, ${Marpekh1ThumbnailX3WEBP} 3x`} type="image/webp" />
+        <source srcSet={`${Marpekh1ThumbnailAVIF} 1x, ${Marpekh1ThumbnailX2AVIF} 2x, ${Marpekh1ThumbnailX3AVIF} 3x`} type="image/avif" />
+        <source srcSet={`${Marpekh1ThumbnailWEBP} 1x, ${Marpekh1ThumbnailX2WEBP} 2x, ${Marpekh1ThumbnailX3WEBP} 3x`} type="image/webp" />
         <img width="128" height="80" srcSet={`${Marpekh1ThumbnailJPG} 1x, ${Marpekh1ThumbnailX2JPG} 2x, ${Marpekh1ThumbnailX3JPG} 3x`} src={Marpekh1ThumbnailJPG} alt="Чёрный роадстер сфотографироован под углом" />
       </picture>
       <picture>
-        <source width="128" height="80" srcSet={`${Marpekh2ThumbnailAVIF} 1x, ${Marpekh2ThumbnailX2AVIF} 2x, ${Marpekh2ThumbnailX3AVIF} 3x`} type="image/avif" />
-        <source width="128" height="80" srcSet={`${Marpekh2ThumbnailWEBP} 1x, ${Marpekh2ThumbnailX2WEBP} 2x, ${Marpekh2ThumbnailX3WEBP} 3x`} type="image/webp" />
+        <source srcSet={`${Marpekh2ThumbnailAVIF} 1x, ${Marpekh2ThumbnailX2AVIF} 2x, ${Marpekh2ThumbnailX3AVIF} 3x`} type="image/avif" />
+        <source srcSet={`${Marpekh2ThumbnailWEBP} 1x, ${Marpekh2ThumbnailX2WEBP} 2x, ${Marpekh2ThumbnailX3WEBP} 3x`} type="image/webp" />
         <img width="128" height="80" srcSet={`${Marpekh2ThumbnailJPG} 1x, ${Marpekh2ThumbnailX2JPG} 2x, ${Marpekh2ThumbnailX3JPG} 3x`} src={Marpekh2ThumbnailJPG} alt="Кожаный салон чёрного роадстера" />
       </picture>
       <picture>
-        <source width="128" height="80" srcSet={`${Marpekh3ThumbnailAVIF} 1x, ${Marpekh3ThumbnailX2AVIF} 2x, ${Marpekh3ThumbnailX3AVIF} 3x`} type="image/avif" />
-        <source width="128" height="80" srcSet={`${Marpekh3ThumbnailWEBP} 1x, ${Marpekh3ThumbnailX2WEBP} 2x, ${Marpekh3ThumbnailX3WEBP} 3x`} type="image/webp" />
+        <source srcSet={`${Marpekh3ThumbnailAVIF} 1x, ${Marpekh3ThumbnailX2AVIF} 2x, ${Marpekh3ThumbnailX3AVIF} 3x`} type="image/avif" />
+        <source srcSet={`${Marpekh3ThumbnailWEBP} 1x, ${Marpekh3ThumbnailX2WEBP} 2x, ${Marpekh3ThumbnailX3WEBP} 3x`} type="image/webp" />
         <img width="128" height="80" srcSet={`${Marpekh3ThumbnailJPG} 1x, ${Marpekh3ThumbnailX2JPG} 2x, ${Marpekh3ThumbnailX3JPG} 3x`} src={Marpekh3ThumbnailJPG} alt="Приборная панель чёрного роадстера" />
       </picture>
       <button 

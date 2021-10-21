@@ -43,20 +43,20 @@ const SliderDisplay = ({ currentSlide }) => {
     <div className="slider-display">
       {currentSlide === 1 &&
         <picture>
-          <source width="600" height="375" srcSet={`${Marpekh1FullAVIF} 1x, ${Marpekh1FullX2AVIF} 2x, ${Marpekh1FullX3AVIF} 3x`} type="image/avif" />
-          <source width="600" height="375" srcSet={`${Marpekh1FullWEBP} 1x, ${Marpekh1FullX2WEBP} 2x, ${Marpekh1FullX3WEBP} 3x`} type="image/webp" />
+          <source srcSet={`${Marpekh1FullAVIF} 1x, ${Marpekh1FullX2AVIF} 2x, ${Marpekh1FullX3AVIF} 3x`} type="image/avif" />
+          <source srcSet={`${Marpekh1FullWEBP} 1x, ${Marpekh1FullX2WEBP} 2x, ${Marpekh1FullX3WEBP} 3x`} type="image/webp" />
           <img width="600" height="375" srcSet={`${Marpekh1FullJPG} 1x, ${Marpekh1FullX2JPG} 2x, ${Marpekh1FullX3JPG} 3x`} src={Marpekh1FullJPG} alt="Чёрный роадстер сфотографироован под углом" />
         </picture>}
         {currentSlide === 2 &&
         <picture>
-          <source width="600" height="375" srcSet={`${Marpekh2FullAVIF} 1x, ${Marpekh2FullX2AVIF} 2x, ${Marpekh2FullX3AVIF} 3x`} type="image/avif" />
-          <source width="600" height="375" srcSet={`${Marpekh2FullWEBP} 1x, ${Marpekh2FullX2WEBP} 2x, ${Marpekh2FullX3WEBP} 3x`} type="image/webp" />
+          <source srcSet={`${Marpekh2FullAVIF} 1x, ${Marpekh2FullX2AVIF} 2x, ${Marpekh2FullX3AVIF} 3x`} type="image/avif" />
+          <source srcSet={`${Marpekh2FullWEBP} 1x, ${Marpekh2FullX2WEBP} 2x, ${Marpekh2FullX3WEBP} 3x`} type="image/webp" />
           <img width="600" height="375" srcSet={`${Marpekh2FullJPG} 1x, ${Marpekh2FullX2JPG} 2x, ${Marpekh2FullX3JPG} 3x`} src={Marpekh2FullJPG} alt="Кожаный салон чёрного роадстера" />
         </picture>}
         {currentSlide === 3 &&
         <picture>
-          <source width="600" height="375" srcSet={`${Marpekh3FullAVIF} 1x, ${Marpekh3FullX2AVIF} 2x, ${Marpekh3FullX3AVIF} 3x`} type="image/avif" />
-          <source width="600" height="375" srcSet={`${Marpekh3FullWEBP} 1x, ${Marpekh3FullX2WEBP} 2x, ${Marpekh3FullX3WEBP} 3x`} type="image/webp" />
+          <source srcSet={`${Marpekh3FullAVIF} 1x, ${Marpekh3FullX2AVIF} 2x, ${Marpekh3FullX3AVIF} 3x`} type="image/avif" />
+          <source srcSet={`${Marpekh3FullWEBP} 1x, ${Marpekh3FullX2WEBP} 2x, ${Marpekh3FullX3WEBP} 3x`} type="image/webp" />
           <img width="600" height="375" srcSet={`${Marpekh3FullJPG} 1x, ${Marpekh3FullX2JPG} 2x, ${Marpekh3FullX3JPG} 3x`} src={Marpekh3FullJPG} alt="Приборная панель чёрного роадстера" />
         </picture>
       }

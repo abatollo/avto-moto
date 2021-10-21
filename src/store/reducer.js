@@ -24,28 +24,33 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ActionType.CHANGE_IS_POPUP_OPENED:
+    case ActionType.CHANGE_IS_POPUP_OPENED: {
       return {
         ...state,
         isPopupOpened: action.payload,
       };
-    case ActionType.SET_CURRENT_SLIDE:
+    }
+    case ActionType.SET_CURRENT_SLIDE: {
       return {
         ...state,
         currentSlide: action.payload,
       };
-    case ActionType.SET_CURRENT_TAB:
+    }
+    case ActionType.SET_CURRENT_TAB: {
       return {
         ...state,
         currentTab: action.payload,
       };
-    case ActionType.ADD_REVIEW:
+    }
+    case ActionType.ADD_REVIEW: {
       return {
         ...state,
         reviews: [...state.reviews, action.payload],
       };
-    default:
+    }
+    default: {
       return state;
+    }
   }
 };
 
