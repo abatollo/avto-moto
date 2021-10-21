@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
 import {ActionCreator} from '../../store/action';
 
@@ -83,6 +84,11 @@ const SliderControls = ({ currentSlide, setCurrentSlide }) => {
       </button>
     </div>
   );
+};
+
+SliderControls.propTypes = {
+  currentSlide: PropTypes.number.isRequired,
+  setCurrentSlide: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {

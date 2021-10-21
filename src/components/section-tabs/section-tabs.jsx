@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
 import {ActionCreator} from '../../store/action';
 
@@ -36,6 +37,11 @@ const SectionTabs = ({ currentTab, setCurrentTab }) => {
       {currentTab === `product-tab-contact-information` && <SectionContactInformation /> }
     </section>
   );
+};
+
+SectionTabs.propTypes = {
+  currentTab: PropTypes.string.isRequired,
+  setCurrentTab: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {

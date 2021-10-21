@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
 import Marpekh1FullJPG from '../../img/marpekh-1-full.jpg';
 import Marpekh1FullWEBP from '../../img/marpekh-1-full.webp';
@@ -62,6 +63,10 @@ const SliderDisplay = ({ currentSlide }) => {
     </div>
   );
 };
+
+SliderDisplay.propTypes = {
+  currentSlide: PropTypes.number.isRequired
+}
 
 const mapStateToProps = (state) => {
   return {

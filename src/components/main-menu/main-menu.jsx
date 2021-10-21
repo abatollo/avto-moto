@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const MainMenu = ({ menuItems, isHeaderMenu = false }) => {
   return (
@@ -12,6 +13,16 @@ const MainMenu = ({ menuItems, isHeaderMenu = false }) => {
       )}
     </ul>
   );
+};
+
+MainMenu.propTypes = {
+  menuItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      href: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
+    })
+  ),
+  isHeaderMenu: PropTypes.bool
 };
 
 export default MainMenu;

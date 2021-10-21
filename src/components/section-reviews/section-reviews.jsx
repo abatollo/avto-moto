@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
 import {ActionCreator} from '../../store/action';
 
@@ -74,6 +75,19 @@ const SectionReviews = ({ changeIsPopupOpened, reviews }) => {
       </ul>
     </section>
   );
+};
+
+SectionReviews.propTypes = {
+  changeIsPopupOpened: PropTypes.func.isRequired,
+  reviews: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      advantages: PropTypes.string,
+      disadvantages: PropTypes.string,
+      rating: PropTypes.number,
+      comment: PropTypes.string.isRequired,
+    })
+  ).isRequired
 };
 
 const mapDispatchToProps = (dispatch) => ({

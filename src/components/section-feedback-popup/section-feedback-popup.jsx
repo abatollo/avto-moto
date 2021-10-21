@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
 import {ActionCreator} from '../../store/action';
 
@@ -83,7 +84,7 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
   };
 
   const starChangeHandler = (newRating) => {
-    setRating(newRating);
+    setRating(Number(newRating));
     localStorage.setItem(`rating`, newRating);
   };
 
@@ -141,6 +142,12 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
   } else {
     return null;
   }
+};
+
+SectionFeedbackPopup.propTypes = {
+  isPopupOpened: PropTypes.bool.isRequired,
+  changeIsPopupOpened: PropTypes.func.isRequired,
+  addReview: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {
