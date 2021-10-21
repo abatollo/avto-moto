@@ -6,8 +6,8 @@ const MainMenu = ({ menuItems, isHeaderMenu = false }) => {
     <ul className={`main-menu${isHeaderMenu ? ` main-menu--header` : ``}`}>
       {menuItems.map((menuItem, menuItemIndex) => 
         <li className="main-menu__item" key={menuItemIndex}>
-          <a className="main-menu__link" href={`/${menuItem.HREF}`}>
-            {menuItem.LABEL}
+          <a className="main-menu__link" href={`/${menuItem.href}`}>
+            {menuItem.label}
           </a>
         </li>
       )}
@@ -18,8 +18,8 @@ const MainMenu = ({ menuItems, isHeaderMenu = false }) => {
 MainMenu.propTypes = {
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
-      HREF: PropTypes.string.isRequired,
-      LABEL: PropTypes.string.isRequired
+      href: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
     })
   ),
   isHeaderMenu: PropTypes.bool

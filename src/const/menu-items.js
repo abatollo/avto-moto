@@ -1,51 +1,51 @@
-const HeaderMenuItems = [
+const headerMenuItems = [
   {
-    HREF: `cars`,
-    LABEL: `Автомобили`
+    href: `cars`,
+    label: `Автомобили`
   },
   {
-    HREF: `contact-information`,
-    LABEL: `Контакты`
+    href: `contact-information`,
+    label: `Контакты`
   },
   {
-    HREF: `services`,
-    LABEL: `Услуги`
+    href: `services`,
+    label: `Услуги`
   },
   {
-    HREF: `jobs`,
-    LABEL: `Вакансии`
-  },
-];
-
-const FooterMenuItems = [
-  {
-    HREF: `corporate-clients`,
-    LABEL: `Корпоративным клиентам`
-  },
-  {
-    HREF: `clients`,
-    LABEL: `Клиентам`
-  },
-  {
-    HREF: `rent`,
-    LABEL: `Аренда авто`
-  },
-  {
-    HREF: `carsharing`,
-    LABEL: `Каршеринг`
-  },
-  {
-    HREF: `how2sell`,
-    LABEL: `Как продать авто`
-  },
-  {
-    HREF: `trade-in`,
-    LABEL: `Trade-in`
-  },
-  {
-    HREF: `test-drive`,
-    LABEL: `Test drive`
+    href: `jobs`,
+    label: `Вакансии`
   },
 ];
 
-export {HeaderMenuItems, FooterMenuItems};
+const footerMenuItems = [
+  {
+    href: `corporate-clients`,
+    label: `Корпоративным клиентам`
+  },
+  {
+    href: `clients`,
+    label: `Клиентам`
+  },
+  {
+    href: `rent`,
+    label: `Аренда авто`
+  },
+  {
+    href: `carsharing`,
+    label: `Каршеринг`
+  },
+  {
+    href: `how2sell`,
+    label: `Как продать авто`
+  },
+  {
+    href: `trade-in`,
+    label: `Trade-in`
+  },
+  {
+    href: `test-drive`,
+    label: `Test drive`
+  },
+];
+
+export {headerMenuItems, footerMenuItems};

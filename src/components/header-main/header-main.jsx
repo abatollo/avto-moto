@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { HeaderMenuItems } from '../../const/menu-items';
+import { headerMenuItems } from '../../const/menu-items';
 
 import MainMenu from '../main-menu/main-menu';
 
@@ -18,7 +18,7 @@ const HeaderMain = () => {
               <span className="header-main__logo-subheading">Moto</span>
             </h1>
           </a>
-          <MainMenu menuItems={HeaderMenuItems} isHeaderMenu={true} />
+          <MainMenu menuItems={headerMenuItems} isHeaderMenu={true} />
         </nav>
       </div>
     </header>
