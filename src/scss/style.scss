@@ -5,15 +5,15 @@
 @import "global/mixins.scss";
 @import "global/visually-hidden.scss";
 
-@import "blocks/header-main.scss";
-@import "blocks/main-menu.scss";
-@import "blocks/section-main.scss";
-@import "blocks/slider-display.scss";
-@import "blocks/slider-controls.scss";
-@import "blocks/section-brief.scss";
-@import "blocks/section-tabs.scss";
-@import "blocks/section-specifications.scss";
-@import "blocks/section-reviews.scss";
-@import "blocks/section-contact-information.scss";
-@import "blocks/section-feedback-popup.scss";
-@import "blocks/footer-main.scss";
+@import "../components/header-main/header-main.scss";
+@import "../components/main-menu/main-menu.scss";
+@import "../components/section-main/section-main.scss";
+@import "../components/slider-display/slider-display.scss";
+@import "../components/slider-controls/slider-controls.scss";
+@import "../components/section-brief/section-brief.scss";
+@import "../components/section-tabs/section-tabs.scss";
+@import "../components/section-specifications/section-specifications.scss";
+@import "../components/section-reviews/section-reviews.scss";
+@import "../components/section-contact-information/section-contact-information.scss";
+@import "../components/section-feedback-popup/section-feedback-popup.scss";
+@import "../components/footer-main/footer-main.scss";
