@@ -107,9 +107,12 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
           <form className="feedback-form" id="feedback-form" method="POST" action="https://echo.htmlacademy.ru">
             <div className="feedback-form__input-wrapper--name">
               {nameError && <div className="feedback-form__error">Пожалуйста, заполните поле</div>}
+              <label className="visually-hidden" htmlFor="feedback-form-name">Ваше имя</label>
               <input className={`feedback-form__input feedback-form__input--name${nameError ? ` feedback-form__input--error` : ``}`} ref={refNameInput} type="text" name="name" id="feedback-form-name" placeholder="Имя" value={name} onChange={(evt) => {nameChangeHandler(evt)}} required />
             </div>
+            <label className="visually-hidden" htmlFor="feedback-form-advantages">Достоинства товара</label>
             <input className="feedback-form__input feedback-form__input--advantages" type="text" name="advantages" id="feedback-form-advantages" placeholder="Достоинства" onChange={(evt) => {advantagesChangeHandler(evt)}} value={advantages} />
+            <label className="visually-hidden" htmlFor="feedback-form-disadvantages">Недостатки товара</label>
             <input className="feedback-form__input feedback-form__input--disadvantages" type="text" name="disadvantages" id="feedback-form-disadvantages" placeholder="Недостатки" onChange={(evt) => {disadvantagesChangeHandler(evt)}} value={disadvantages} />
             <div className="feedback-form__stars">
               <span className="feedback-form__stars-label">Оцените товар:</span>
@@ -131,6 +134,7 @@ const SectionFeedbackPopup = ({ isPopupOpened, changeIsPopupOpened, addReview })
             </div>
             <div className="feedback-form__input-wrapper--comment">
               {commentError && <div className="feedback-form__error">Пожалуйста, заполните поле</div>}
+              <label className="visually-hidden" htmlFor="feedback-form-comment">Ваш комментарий</label>
               <textarea className={`feedback-form__input feedback-form__input--comment${commentError ? ` feedback-form__input--error` : ``}`} name="comment" id="feedback-form-comment" cols="30" rows="10" placeholder="Комментарий" onChange={(evt) => {commentChangeHandler(evt)}} value={comment} required></textarea>
             </div>
           </form>
