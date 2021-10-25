@@ -11,7 +11,7 @@ const HeaderMain = () => {
     <header className="header-main">
       <div className="container center">
         <nav className="header-main__navigation">
-          <a className="header-main__logo-link" href="/">
+          <a className="header-main__logo-link">
             <img className="header-main__logo-image" src={logo} width="55" height="55" alt="Логотип AVTO MOTO" />
             <h1 className="header-main__logo-heading-wrapper">
               <span className="header-main__logo-heading">Avto</span>
