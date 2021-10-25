@@ -44,3 +44,8 @@
 
   cursor: auto;
 }
+
+.section-tabs__input:focus + .section-tabs__label {
+  outline: medium auto Highlight;
+  outline: medium auto -webkit-focus-ring-color;
+}
