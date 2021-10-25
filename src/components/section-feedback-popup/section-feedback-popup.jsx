@@ -18,7 +18,7 @@ const SectionFeedbackPopup = ({ isPopupOpened, onIsPopupOpenedChange, onReviewAd
   const [name, setName] = useState(localStorage.getItem(`name`) || ``);
   const [advantages, setAdvantages] = useState(localStorage.getItem(`advantages`) || ``);
   const [disadvantages, setDisadvantages] = useState(localStorage.getItem(`disadvantages`) || ``);
-  const [rating, setRating] = useState(localStorage.getItem(`rating`) || 2);
+  const [rating, setRating] = useState(localStorage.getItem(`rating`) || 0);
   const [comment, setComment] = useState(localStorage.getItem(`comment`) || ``);
 
   const handleFeedbackFormSubmitButtonClick = () => {
