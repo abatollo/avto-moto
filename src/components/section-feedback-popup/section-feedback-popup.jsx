@@ -120,7 +120,7 @@ const SectionFeedbackPopup = ({ isPopupOpened, onIsPopupOpenedChange, onReviewAd
                 {[...Array(5)].map((_starInput, starInputIndex) => {
                   return (
                     <li key={starInputIndex}>
-                      <input className="visually-hidden" type="radio" name="rating" id={`star-${starInputIndex + 1}`} onChange={() => {handleStarChange(starInputIndex + 1)}} checked={rating === starInputIndex + 1} />
+                      <input className="feedback-form__stars-list-input visually-hidden" type="radio" name="rating" id={`star-${starInputIndex + 1}`} onChange={() => {handleStarChange(starInputIndex + 1)}} checked={rating === starInputIndex + 1} />
                       <label className="feedback-form__stars-list-label" htmlFor={`star-${starInputIndex + 1}`}>
                         {(starInputIndex < rating) ? 
                           <img width="27" height="25" src={StarActiveIcon} alt="" /> :

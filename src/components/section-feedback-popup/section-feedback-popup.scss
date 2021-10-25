@@ -182,6 +182,11 @@
   cursor: pointer;
 }
 
+.feedback-form__stars-list-input:focus + .feedback-form__stars-list-label {
+  outline: medium auto Highlight;
+  outline: medium auto -webkit-focus-ring-color;
+}
+
 .feedback-form__input--comment {
   max-height: 118px;
 
