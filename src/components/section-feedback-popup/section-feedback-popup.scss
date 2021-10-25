@@ -184,6 +184,8 @@
 
 .feedback-form__input--comment {
   max-height: 118px;
+
+  resize: none;
 }
 
 .feedback-form__error + .feedback-form__input--comment {
