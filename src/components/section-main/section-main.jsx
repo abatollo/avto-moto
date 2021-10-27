@@ -18,6 +18,10 @@ const SectionMain = ({isPopupOpened}) => {
   );
 };
 
+SectionMain.propTypes = {
+  isPopupOpened: PropTypes.bool.isRequired
+};
+
 const mapStateToProps = (state) => {
   return {
     isPopupOpened: state.isPopupOpened

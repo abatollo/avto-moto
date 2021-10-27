@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 50px;
+  align-content: start;
 
   margin-top: 75px;
   margin-bottom: 140px;
-  min-height: 100vh;
 }

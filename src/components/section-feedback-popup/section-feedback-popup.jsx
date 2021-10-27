@@ -52,11 +52,15 @@ const SectionFeedbackPopup = ({ isPopupOpened, onIsPopupOpenedChange, onReviewAd
   };
 
   useEffect(() => {
+    let scrollbarWidth = window.innerWidth - document.body.clientWidth;
     if (isPopupOpened) { 
       document.body.style.overflow = `hidden`;
-    } else {
-      document.body.style.overflow = ``;
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
     }
+    return () => {
+      document.body.style.overflow = ``;
+      document.body.style.paddingRight = ``;
+    };
   }, [isPopupOpened]);
 
   const handleNameChange = (evt) => {
@@ -121,7 +125,7 @@ const SectionFeedbackPopup = ({ isPopupOpened, onIsPopupOpenedChange, onReviewAd
   useEffect(() => {
     document.addEventListener(`keydown`, handlePopupKeydown);
     return () => { document.removeEventListener(`keydown`, handlePopupKeydown) };
-  }, []);
+  });
 
   useEffect(() => {
     if (refPopup.current) {
@@ -169,7 +173,7 @@ const SectionFeedbackPopup = ({ isPopupOpened, onIsPopupOpenedChange, onReviewAd
           </div>
         </form>
         <button className="feedback-form__submit-button" form="feedback-form" type="submit" onClick={handleFeedbackFormSubmitButtonClick}>Оставить отзыв</button>
-        <button className="feedback-form__close-button" type="button" onClick={handleFeedbackFormCloseButtonClick}><img src={CloseIcon} alt="" /></button>
+        <button className="feedback-form__close-button" type="button" onClick={handleFeedbackFormCloseButtonClick}><img width="15" height="15" src={CloseIcon} alt="" /></button>
       </div>
     </section>
   );

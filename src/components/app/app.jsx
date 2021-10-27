@@ -6,11 +6,11 @@ import { FooterMain } from '../footer-main/footer-main';
 
 const App = () => {
   return (
-    <>
+    <div className="wrapper-global">
       <HeaderMain />
       <SectionMain />
       <FooterMain />
-    </>
+    </div>
   );
 }
 
