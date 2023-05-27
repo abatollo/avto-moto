@@ -1,6 +1,6 @@
 {
   "name": "avto-moto",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "private": true,
   "dependencies": {
     "@redux-devtools/extension": "^3.2.5",
