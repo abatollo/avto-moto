@@ -1,6 +1,6 @@
 {
   "name": "avto-moto",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "private": true,
   "dependencies": {
     "@redux-devtools/extension": "^3.2.5",
@@ -9,7 +9,7 @@
     "react-redux": "^8.1.2",
     "react-scripts": "^5.0.1",
     "redux": "^4.2.1",
-    "sass": "^1.64.2"
+    "sass": "^1.66.1"
   },
   "scripts": {
     "start": "react-scripts start",
